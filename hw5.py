@@ -5,6 +5,7 @@ import pickle
 import string
 from collections import Counter
 
+
 def main(filename):
     # read file into lines
     lines = open(filename).readlines()
@@ -22,8 +23,7 @@ def main(filename):
         for word in words:
             # then, remove (strip) unwanted punctuations from every word
             # "dream." => "dream"
-            for p in string.punctuation:
-                word = word.strip(p)
+            word = word.strip(string.punctuation)
             # check if word is not empty
             if word:
                 # append the word to "all_words" list
